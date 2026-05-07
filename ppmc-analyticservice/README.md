@@ -1,4 +1,4 @@
-# Broadstreet Dashboard
+# ppmc-analyticservice
 
 A lightweight web dashboard for the [Broadstreet Ads](https://broadstreetads.com/) API. It surfaces your networks, advertisers, campaigns, and zones with at-a-glance stats and search.
 

@@ -1,5 +1,5 @@
 {
-  "name": "broadstreet-dashboard",
+  "name": "ppmc-analyticservice",
   "version": "0.1.0",
   "private": true,
   "description": "A dashboard that connects to the Broadstreet Ads API",
