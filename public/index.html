@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Broadstreet Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo-dot"></span>
+        <span>Broadstreet Dashboard</span>
+      </div>
+      <div class="topbar-right">
+        <label for="network-select">Network</label>
+        <select id="network-select" aria-label="Network"></select>
+        <span id="token-status" class="pill" title="Access token status"></span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="stats">
+        <div class="stat-card">
+          <div class="stat-label">Advertisers</div>
+          <div class="stat-value" id="stat-advertisers">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Campaigns</div>
+          <div class="stat-value" id="stat-campaigns">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Active Campaigns</div>
+          <div class="stat-value" id="stat-active-campaigns">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Zones</div>
+          <div class="stat-value" id="stat-zones">—</div>
+        </div>
+      </section>
+
+      <section class="panels">
+        <article class="panel">
+          <header class="panel-header">
+            <h2>Advertisers</h2>
+            <input
+              id="advertiser-search"
+              type="search"
+              placeholder="Search advertisers…"
+              aria-label="Search advertisers"
+            />
+          </header>
+          <div class="panel-body">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th class="num">Campaigns</th>
+                </tr>
+              </thead>
+              <tbody id="advertisers-body">
+                <tr class="empty">
+                  <td colspan="2">Select a network to begin.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel">
+          <header class="panel-header">
+            <h2 id="campaigns-title">Campaigns</h2>
+          </header>
+          <div class="panel-body">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th class="num">Impressions</th>
+                  <th class="num">Clicks</th>
+                  <th class="num">CTR</th>
+                </tr>
+              </thead>
+              <tbody id="campaigns-body">
+                <tr class="empty">
+                  <td colspan="5">Pick an advertiser to see campaigns.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel panel-wide">
+          <header class="panel-header">
+            <h2>Zones</h2>
+            <input
+              id="zone-search"
+              type="search"
+              placeholder="Search zones…"
+              aria-label="Search zones"
+            />
+          </header>
+          <div class="panel-body">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Alias</th>
+                  <th class="num">Width</th>
+                  <th class="num">Height</th>
+                  <th>Self-serve</th>
+                </tr>
+              </thead>
+              <tbody id="zones-body">
+                <tr class="empty">
+                  <td colspan="5">Select a network to load zones.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <div id="error-toast" class="toast hidden" role="alert"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
